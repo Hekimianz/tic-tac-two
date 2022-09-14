@@ -14,16 +14,17 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 8px;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .gameTile {
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     font-size: 4em;
     font-family: 'Montserrat', sans-serif;
-    width: 333.336px;
-    height: 280.664px;
+    font-weight: 700;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -31,6 +32,16 @@
     -o-user-select: none;
     user-select: none;
     cursor: pointer;
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+.gameTile:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .rightBorder {
