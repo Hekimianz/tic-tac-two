@@ -211,15 +211,55 @@ h2 {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-#winDiv {
-    position: absolute;
-    font-size: 4em;
-    font-weight: bold;
-    top: 20%;
-    background-color: rgba(0, 0, 0, .1);
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+
+@media (max-width: 600px) {
+    .markSelectors {
+        width: 150px;
+        height: 150px;
+    }
+
+    #nameForm {
+        width: 200px;
+        height: 200px;
+    }
+
+    #nameForm h2 {
+        margin-top: 0;
+    }
+
+    #markSelectorsDiv {
+        grid-template-rows: 100px 100px;
+        margin-top: 350px;
+    }
+
+    #nameNext {
+        margin: 20px;
+    }
+
+    #gameBoard {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 600px) {
+    .markSelectors {
+        width: 250px;
+        height: 250px;
+    }
+
+    #gameBoard {
+        height: 500px;
+    }
+}
+
+@media (min-width: 800px) {
+    .markSelectors {
+        width: 300px;
+        height: 300px;
+    }
+
+    #gameBoard {
+        height: 500px;
+    }
 }

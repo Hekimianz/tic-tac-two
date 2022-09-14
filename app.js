@@ -29,9 +29,6 @@
         let playerMarker;
         let currentMark;
         let player;
-        let winDiv = document.querySelector('#winDiv');
-        winDiv.style.display = 'none';
-        let winText = document.querySelector('#winText');
         let gameTable = document.querySelector('#gameBoard');
 
 
@@ -51,7 +48,6 @@
             playerForm.style.display = 'none';
             mainDiv.style.display = 'flex';
             currentMark = player.marker;
-            winText.innerHTML = `${player.name.toUpperCase()} WINS!`
             return { currentMark, player };
         })
         xSelector.addEventListener('click', function () {
@@ -61,7 +57,6 @@
             playerForm.style.display = 'none';
             mainDiv.style.display = 'flex';
             currentMark = player.marker;
-            winText.innerHTML = `${player.name.toUpperCase()} WINS!`
             return { currentMark, player };
         })
 
@@ -98,16 +93,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 0; i < 3; i++) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 0; i < 3; i++) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -119,16 +111,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 3; i < 6; i++) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 3; i < 6; i++) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -140,16 +129,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 6; i < 9; i++) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 6; i < 9; i++) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -161,16 +147,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 0; i < 3; i++) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 0; i < 3; i++) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -181,16 +164,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 3; i < 6; i++) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 3; i < 6; i++) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -201,16 +181,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 6; i < 9; i++) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 6; i < 9; i++) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -222,16 +199,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 0; i < 7; i = i + 3) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 0; i < 7; i = i + 3) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -242,16 +216,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 1; i < 8; i = i + 3) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 1; i < 8; i = i + 3) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -262,16 +233,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 2; i < 9; i = i + 3) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 2; i < 9; i = i + 3) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -282,16 +250,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 0; i < 7; i = i + 3) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 0; i < 7; i = i + 3) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -302,16 +267,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 1; i < 8; i = i + 3) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 1; i < 8; i = i + 3) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -322,16 +284,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 2; i < 9; i = i + 3) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 2; i < 9; i = i + 3) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -343,16 +302,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 0; i < 9; i = i + 4) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 0; i < 9; i = i + 4) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -363,16 +319,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'X') {
                         for (let i = 2; i < 7; i = i + 2) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'O') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 2; i < 7; i = i + 2) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -383,16 +336,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 0; i < 9; i = i + 4) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 0; i < 9; i = i + 4) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -403,16 +353,13 @@
                     gameBoard.forEach((element, index) => {
                         gameBoard[index] = '';
                     })
-                    winDiv.style.display = 'flex';
                     if (playerMarker == 'O') {
                         for (let i = 2; i < 7; i = i + 2) {
                             gameTile[i].classList.add('winTile');
                         }
-                        winText.innerHTML = `${player.name.toUpperCase()} WINS!`;
                         gameTable.style.boxShadow = 'rgba(0, 255, 76, 0.25) 0px 50px 100px -20px, rgba(3, 31, 2, 0.3) 0px 30px 60px -30px, rgba(8, 194, 36, 0.35) 0px -2px 6px 0px inset';
                     }
                     else if (playerMarker == 'X') {
-                        winText.innerHTML = 'YOU LOSE!';
                         for (let i = 2; i < 7; i = i + 2) {
                             gameTile[i].classList.add('loseTile');
                         }
@@ -444,7 +391,6 @@
             })
             gameEnd = false;
             currentMark = playerMarker;
-            winDiv.style.display = 'none';
             gameTable.style.boxShadow = 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px'
         })
 
