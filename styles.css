@@ -264,6 +264,12 @@ h2 {
     }
 }
 
+@media (min-width: 999px) {
+    #gameBoard {
+        height: 800px;
+    }
+}
+
 footer {
     position: absolute;
     left: 0;
